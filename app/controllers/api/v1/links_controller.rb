@@ -16,6 +16,7 @@ module Api::V1
     def handle_post
       response = Curl.post(link.original, request.body.read) do |curl|
         curl.headers = request.headers.env.reject { |key| key.to_s.include?('.') }
+        curl.headers['RAW_POST_DATA'] = nil
         curl.headers['Content-Type'] = 'application/json'
         curl.headers['Accept'] = 'application/json'
       end
