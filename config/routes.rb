@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'hc' => 'application#hc'
   get '*suffix', to: 'api/v1/links#handle_get'
   post '*suffix', to: 'api/v1/links#handle_post'
 end

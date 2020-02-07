@@ -26,7 +26,7 @@ module Api::V1
     private
 
     def link
-      @link ||= Link.find_by(suffix: params.require(:suffix))
+      @link ||= Link.find_by!(suffix: params.require(:suffix))
     end
   end
 end
