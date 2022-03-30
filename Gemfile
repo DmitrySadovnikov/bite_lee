@@ -4,7 +4,7 @@ ruby '2.6.1'
 
 gem 'rails', '~> 6.0.0.rc1'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'pry-rails'
 gem 'pry-byebug'
